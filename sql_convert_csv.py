@@ -6,7 +6,9 @@ import os
 
 def extract_table_names(sql_script):
     # Regular expression to find CREATE TABLE statements
-    create_table_pattern = re.compile(r'CREATE TABLE IF NOT EXISTS\s+"?(\w+)"?', re.IGNORECASE)
+    # Try One of these versions 
+    # create_table_pattern = re.compile(r'CREATE TABLE IF NOT EXISTS\s+"?(\w+)"?', re.IGNORECASE)
+    create_table_pattern = re.compile(r'CREATE TABLE\s+"?(\w+)"?', re.IGNORECASE)
     table_names = create_table_pattern.findall(sql_script)
     return table_names
 
