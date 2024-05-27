@@ -10,9 +10,14 @@ def extract_table_names(sql_script):
     table_names = create_table_pattern.findall(sql_script)
     return table_names
 
+def convert_blob_to_csv_string(blob):
+    # Convert the binary data to a comma-separated string of values between 0 and 255
+    return ','.join(map(str, blob))
+
 def convert_sql_to_csv(sql_file_path, csv_file_path):
     # Establish a connection to an in-memory SQLite database
     conn = sqlite3.connect(':memory:')
+    conn.text_factory = sqlite3.OptimizedUnicode
     cursor = conn.cursor()
 
     # Read the SQL file
@@ -43,7 +48,13 @@ def convert_sql_to_csv(sql_file_path, csv_file_path):
             # Write header
             csv_writer.writerow(column_names)
             # Write data rows
-            csv_writer.writerows(rows)
+            for row in rows:
+                row = list(row)
+                # Convert BLOB data in the 'data' column (assuming column name is 'data')
+                for i, col in enumerate(column_names):
+                    if col == 'data' and isinstance(row[i], bytes):
+                        row[i] = convert_blob_to_csv_string(row[i])
+                csv_writer.writerow(row)
 
         print(f"Data from table '{table_name}' has been successfully written to {csv_file_table_path}")
 
@@ -67,4 +78,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
