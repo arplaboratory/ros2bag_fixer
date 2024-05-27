@@ -11,8 +11,7 @@ This is a repository on how to recover Ros2 bags that were corrupted as in they 
 2.  Convert sql file to csv ([There are Online website to do this or look it up for Python later] (https://www.sqlite.org/cli.html))
 3.  Edit the jupyter Notebook to point the topic id and file name 
 
-## How To Recover a corrupted .mcap file (MCAP Format has trouble being plotted in plotjuggler)
-
+## How To Recover a corrupted .mcap file 
 This tool comes from foxglove stuido so use that for plotting https://github.com/foxglove/mcap/releases/tag/releases%2Fmcap-cli%2Fv0.0.46
 1. Use the mcap tool in the repository
    
