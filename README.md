@@ -8,7 +8,7 @@ This is a repository on how to recover Ros2 bags that were corrupted as in they 
    chmod +x sqlite3
    sqlite3 corrupt.db3 .recover >data.sql
    ```
-2.  Convert sql file to csv ([There are Online website to do this or look it up for Python later] (https://www.sqlite.org/cli.html))
+2.  Convert sql file to csv ([There are Online website or use the sqlite3 tool (Forgot how I did it)] (https://www.sqlite.org/cli.html))
 3.  Edit the jupyter Notebook to point the topic id and file name 
 
 ## How To Recover a corrupted .mcap file 
