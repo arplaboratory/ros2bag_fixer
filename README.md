@@ -17,5 +17,5 @@ This tool comes from foxglove stuido so use that for plotting https://github.com
    
    ```
    chmod +x mcap-linux-amd64
-   mcap-linux-amd64 recover input_file_path output_file_path
+   ./mcap-linux-amd64 recover in.mcap -o out.mcap
    ```
