@@ -15,7 +15,7 @@ Check this https://codebeautify.org/sql-to-csv-converter to sql-to-csv converter
    python3 convert_sql_to_csv.py --input path/to/file.sql --output path/to/output_base.csv
    ```
 
-3.  Edit the jupyter Notebook to point the topic id and file name 
+3.  Edit the jupyter Notebook to point the topic id and file name (Someone can consider converting .ipnyb to python script and just save images)!
 
 ## How To Recover a corrupted .mcap file 
 This tool comes from foxglove stuido so use that for plotting https://github.com/foxglove/mcap/releases/tag/releases%2Fmcap-cli%2Fv0.0.46
