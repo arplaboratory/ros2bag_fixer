@@ -1,7 +1,7 @@
 # ros2bag_fixer
 This is a repository on how to recover Ros2 bags that were corrupted as in they closed before a graceful shutdown. BOTH formats .db3 and .mcap require a footer/metadata so require a tool to fix this. THE ROS2 COMMAND REINDEX DOES NOT WORK FOR EITHER BAG FORMAT IN HUMBLE!
 
-## How To Recover a corrupted sqlite3 or .db3 without any meta data. 
+## How To Recover a corrupted sqlite3 or .db3 
 
 1. Use the SQLite3 tool to create a .sql file DO THE .db3 NOT THE DIRECTORY!
    ```
