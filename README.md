@@ -8,7 +8,7 @@ This is a repository on how to recover Ros2 bags that were corrupted as in they 
    chmod +x sqlite3
    sqlite3 path_to_corrupt.db3 .recover >data.sql
    ```
-2.  Convert sql file to csv
+2.  Convert sql file to csv (Only with the ROS2 bag)
    ```
    python3 convert_sql_to_csv.py --input path/to/file.sql --output path/to/output_base.csv
    ```
