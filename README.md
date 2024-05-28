@@ -8,7 +8,7 @@ Check this https://codebeautify.org/sql-to-csv-converter to sql-to-csv converter
 1. Use the SQLite3 tool to create a .sql file DO THE .db3 NOT THE DIRECTORY!
    ```
    chmod +x sqlite3
-   sqlite3 path_to_corrupt.db3 .recover >data.sql
+   ./sqlite3 path_to_corrupt.db3 .recover >data.sql
    ```
 2.  Convert sql file to csv (Only with the ROS2 bag)
    ```
