@@ -4,6 +4,7 @@ This is a repository on how to recover Ros2 bags that were corrupted as in they 
 Check this https://codebeautify.org/sql-to-csv-converter to sql-to-csv converter for the format
 
 ## How To Recover a corrupted sqlite3 or .db3 
+The SQLite3 Recovery tool comes from the precompiled binary. Link is here https://www.sqlite.org/download.html  We also assume you have ROS2 Humble installed along with numpy for this repostiroy to work. 
 
 1. Use the SQLite3 tool to create a .sql file DO THE .db3 NOT THE DIRECTORY!
    ```
